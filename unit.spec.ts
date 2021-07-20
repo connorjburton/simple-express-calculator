@@ -19,6 +19,10 @@ describe('Calculator.add', () => {
 
     test('should throw array if not array of numbers', () => {
         expect(() => Calculator.add([])).toThrow(notNumbersErr);
+        // @ts-ignore
+        expect(() => Calculator.add([1, 'a', () => {}, 5])).toThrow(notNumbersErr);
+        // @ts-ignore
+        expect(() => Calculator.add([[], 2, 'a', () => {}, 5])).toThrow(notNumbersErr);
     });
 
     test('should correctly add', () => {
@@ -45,6 +49,10 @@ describe('Calculator.subtract', () => {
 
     test('should throw array if not array of numbers', () => {
         expect(() => Calculator.subtract([])).toThrow(notNumbersErr);
+        // @ts-ignore
+        expect(() => Calculator.subtract([1, 'a', () => {}, 5])).toThrow(notNumbersErr);
+        // @ts-ignore
+        expect(() => Calculator.subtract([[], 2, 'a', () => {}, 5])).toThrow(notNumbersErr);
     });
 
     test('should correctly subtract', () => {
@@ -71,6 +79,10 @@ describe('Calculator.multiply', () => {
     
     test('should throw array if not array of numbers', () => {
         expect(() => Calculator.multiply([])).toThrow(notNumbersErr);
+        // @ts-ignore
+        expect(() => Calculator.multiply([1, 'a', () => {}, 5])).toThrow(notNumbersErr);
+        // @ts-ignore
+        expect(() => Calculator.multiply([[], 2, 'a', () => {}, 5])).toThrow(notNumbersErr);
     });
 
     test('should correctly multiply', () => {
@@ -97,6 +109,10 @@ describe('Calculator.divide', () => {
     
     test('should throw array if not array of numbers', () => {
         expect(() => Calculator.divide([])).toThrow(notNumbersErr);
+        // @ts-ignore
+        expect(() => Calculator.divide([1, 'a', () => {}, 5])).toThrow(notNumbersErr);
+        // @ts-ignore
+        expect(() => Calculator.divide([[], 2, 'a', () => {}, 5])).toThrow(notNumbersErr);
     });
 
     test('should correctly divide', () => {
