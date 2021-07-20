@@ -15,7 +15,7 @@ Both unit & e2e tests are included.
 
 ## Running Application
 
-1. `yarn start`
+1. `yarn start` or `npm run start`
 
 API routes are 
 
